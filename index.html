@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: uppercase;
+            padding-top: 2%;
+        }
+
+        main>figure {
+            width: 100%;
+            height: 50vh;
+
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #lamp {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            height: 50vh;
+        }
+
+        #lamp img {
+            margin-top: 5%;
+            position: absolute;
+        }
+
+
+        #button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #button img {
+            position: absolute;
+            width: 10%;
+            height: 15%;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>second solution</h1>
+        <figure id="lamp">
+            <img src="img/on.jpg" alt="">
+            <img src="img/off.jpg" alt="">
+        </figure>
+        <figure id="button" onclick="para(this)">
+            <img src="img/button_on.png" alt="">
+            <img src="img/button_off.png" alt="">
+        </figure>
+
+    </main>
+    <script>
+        function para(s) {
+            s.previousElementSibling.children[1].classList.toggle('hidden')
+            s.children[1].classList.toggle('hidden')
+
+        }
+    </script>
+</body>
+
+</html>
